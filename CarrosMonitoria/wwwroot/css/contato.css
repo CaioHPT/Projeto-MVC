@@ -1,0 +1,64 @@
+﻿body {
+    background-color: antiquewhite;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(63, 63, 82);
+    padding: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.315);
+}
+
+    .navbar a {
+        text-decoration: none;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+.list-group {
+    box-shadow: 0px 12px 40px 1px rgba(0, 0, 0, 0.171);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.divComentario {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+    .divComentario i {
+        font-size: 15px;
+    }
+
+.bi-pencil-square {
+    color: rgb(56, 56, 219);
+}
+
+.bi-trash {
+    color: red;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+.btnContato {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(204, 81, 59);
+    color: #fff;
+    font-weight: bold;
+    transition: all .4s ease-in-out;
+}
+
+    .btnContato:hover {
+        background-color: rgb(230, 24, 24);
+    }

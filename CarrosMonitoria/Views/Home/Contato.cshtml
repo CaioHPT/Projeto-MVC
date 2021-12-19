@@ -1,0 +1,63 @@
+﻿@model CarrosMonitoria.Models.Contato
+
+<head>
+    <link rel="stylesheet" href="~/css/contato.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-light">
+        <a asp-action="Index">Home</a>
+        <a asp-action="Carros">Carros</a>
+        <a asp-action="Cadastro">Cadastro</a>
+        <a asp-action="Contato">Contato</a>
+        <a asp-action="Compras">Compras</a>
+    </nav>
+</header>
+<main class="container">
+    <h2 class="text-center my-4">Contato</h2>
+    <div class="divComentario">
+        <ul class="list-group">
+            @foreach (var contato in ViewBag.contato as IEnumerable<Contato>)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <p>@contato.Email</p>
+                    <p>@contato.Mensagem</p>
+                    <div class="divOptions">
+                        <a asp-action="EditarContato"><span class="badge"><i class="bi bi-pencil-square"></i></span></a>
+                        <a asp-action="DeletarContato" asp-route-id="@contato.Id_Contato"><span class="badge"><i class="bi bi-trash"></i></span></a>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+    <form asp-action="Contato" method="post">
+        <div class="divContato">
+            <div class="row">
+                <div class="col-12 col-sm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required asp-for="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="Mensagem">Mensagem</label>
+                            <textarea class="form-control" rows="3" required asp-for="Mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btnContato">Enviar</button>
+                </div>
+                <div class="col-12 col-sm">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed unde et ipsam est aliquid atque dolore quod
+                        quas nesciunt modi labore consequuntur exercitationem, fuga doloremque consectetur aspernatur omnis
+                        quisquam
+                        praesentium!
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quam obcaecati laborum pariatur corporis,
+                        quaerat mollitia illum? Adipisci rerum doloremque porro esse tenetur ea, at nesciunt, labore consequuntur
+                        reprehenderit tempora.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>

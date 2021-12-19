@@ -1,0 +1,40 @@
+﻿@model CarrosMonitoria.Models.CadastrarCarro
+
+<head>
+    <link rel="stylesheet" href="~/css/editarCarro.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-light">
+        <a asp-action="Index">Home</a>
+        <a asp-action="Carros">Carros</a>
+        <a asp-action="Cadastro">Cadastro</a>
+        <a asp-action="Contato">Contato</a>
+        <a asp-action="Compras">Compras</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2 class="text-center my-4">Cadastrar Carro</h2>
+    <div class="divCarro text-center">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-12 col-sm">
+                    <div class="form-group">
+                        <label>Nome do Carro</label>
+                        <input type="text" class="form-control" required asp-for="Nome_Carro">
+                    </div>
+                    <div class="form-group">
+                        <label >Preço</label>
+                        <input type="number" class="form-control" required step=".01" asp-for="Preco">
+                    </div>
+                    <div class="form-group">
+                        <label>Ano</label>
+                        <input type="number" class="form-control" required asp-for="Ano">
+                    </div>
+                    <button type="submit" class="btnAtualizar">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>

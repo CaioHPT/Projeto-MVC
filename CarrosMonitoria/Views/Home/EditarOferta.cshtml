@@ -1,0 +1,38 @@
+﻿<head>
+    <link rel="stylesheet" href="~/css/editarOferta.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-light">
+        <a asp-action="Index">Home</a>
+        <a asp-action="Carros">Carros</a>
+        <a asp-action="Cadastro">Cadastro</a>
+        <a asp-action="Contato">Contato</a>
+        <a asp-action="Compras">Compras</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2 class="text-center my-4">Editar Oferta</h2>
+    <div class="divPromocao text-center">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-12 col-sm">
+                    <div class="form-group">
+                        <label for="email">Id</label>
+                        <input type="number" class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Nome do Carro</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Preço</label>
+                        <input type="number" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btnAtualizar">Atualizar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>

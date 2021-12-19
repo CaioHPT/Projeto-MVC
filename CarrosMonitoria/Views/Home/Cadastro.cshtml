@@ -1,0 +1,22 @@
+﻿<head>
+    <link rel="stylesheet" href="~/css/cadastro.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-light">
+        <a asp-action="Index">Home</a>
+        <a asp-action="Carros">Carros</a>
+        <a asp-action="Cadastro">Cadastro</a>
+        <a asp-action="Contato">Contato</a>
+        <a asp-action="Compras">Compras</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2 class="text-center my-4">Cadastros</h2>
+    <div class="divCadastro">
+        <a asp-action="CadastroCarro"><button>Cadastrar Carro</button></a>
+        <a asp-action="CadastrarPromocao"><button>Cadastrar Oferta</button></a>
+        <a asp-action="Comprar"><button>Comprar</button></a>
+    </div>
+</main>
